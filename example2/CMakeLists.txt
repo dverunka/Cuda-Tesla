@@ -8,7 +8,7 @@ set(SOURCES main.cu)
 
 list(APPEND CMAKE_CXX_FLAGS "-O2 -ffast-math -Wall")
 list(APPEND CUDA_NVCC_FLAGS "--compiler-options -fno-strict-aliasing -lineinfo -use_fast_math --ptxas-options -dlcm=cg")
-list(APPEND CUDA_NVCC_FLAGS "-gencode arch=compute_35,code=sm_35")
+list(APPEND CUDA_NVCC_FLAGS "-gencode arch=compute_70,code=sm_70")
 
 cuda_add_executable(${PROJECT_NAME} ${SOURCES})
 
